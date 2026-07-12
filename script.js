@@ -28,3 +28,28 @@ const linkAction = () =>{
     navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
+
+// home text circular
+
+const homeText = document.getElementById('home-text'),
+letters = homeText.textContent.trim().split(''), //converts text to array
+angleStep = 360/letters.length //angle for each character based on length
+
+homeText.textContent='' //clears orgiginal content
+
+//iterates through each character
+letters.forEach((char, i) =>{
+    const span = document.createElement('span') //creates span for each letter
+    span.textContent = char //inserts each char into the span
+    span.style.transform = `rotate(${i*angleStep}deg)` //rotates each letter
+    homeText.appendChild(span)//appends span on the main container
+})
+
+// HOME TYPED JS
+const typedHome = new Typed('#home-typed', {
+    strings: ['ML Engineer', 'Data Analyst', 'ITE Instructor'],
+    typeSpeed: 60,
+    backSpeed: 30,
+    backDelay: 2000,
+    loop:true,
+});
