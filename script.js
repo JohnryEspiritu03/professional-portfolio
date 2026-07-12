@@ -60,3 +60,23 @@ const scrollHeader = () =>{
     this.scrollY >=50 ? header.classList.add('scroll-header'): header.classList.remove('scroll-header')
 }
 window.addEventListener('scroll', scrollHeader)
+
+
+// SWIPER JS
+
+const swiperProject = new Swiper('.project__swiper', {
+  loop: true,
+  spaceBetween: 24,
+  slidesPerView: 'auto',
+  grabCursor: true,
+  speed:600,
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+//   autoplay: {
+//     delay: 3000,
+//     disableOnInteraction: false,
+//   }
+});
