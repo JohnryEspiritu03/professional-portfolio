@@ -564,8 +564,87 @@ img{
     transition: opacity 0.4s;
 }
 
-/* ---------------------------  SECTION --------------------------- */
+/* --------------------------- EXPERIENCE SECTION --------------------------- */
+.experience__container{
+    row-gap: 2rem;;
+}
 
+.experience__card{
+    border-bottom: 2px solid var(--container-color);
+    padding-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.experience__button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    cursor: pointer;
+}
+
+.experience__icon{
+    color: var(--first-color);
+    font-size: 2rem;
+}
+
+.experience__name{
+    font-size: var(--h2-font-size);
+    text-align: initial;
+}
+
+.experience__arrow{
+    width: 32px;
+    height: 32px;
+    background-color: var(--container-color);
+    color: var(--white-color);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    display: grid;
+    place-items: center;
+    margin-left: auto;
+}
+
+.experience__arrow i{
+    transition: rotate 0.4s;
+}
+
+.experience__description{
+    margin-block: 1rem 2rem;
+}
+
+.experience__list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.experience__item{
+    border: 2px solid var(--first-color);
+    border-radius: 4rem;
+    padding: 0.375rem 0.5rem;
+    color: var(--white-color);
+    font: var(--font-semi-bold) var(--h3-font-size) var(--second-font);
+}
+
+.experience__data{
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s, opacity 0.4s;
+}
+
+/* hide experience info */
+.experience-open .experience__data{
+    max-height: 500px;
+    opacity: 1;
+}
+
+/* rotate icon */
+.experience-open .experience__arrow i{
+    rotate: 180deg;
+}
 /* ---------------------------  SECTION --------------------------- */
 
 /* breakpoints  */

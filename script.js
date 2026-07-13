@@ -80,3 +80,6 @@ const swiperProject = new Swiper('.project__swiper', {
 //     disableOnInteraction: false,
 //   }
 });
+
+// SERVICES ACCORDION
+
