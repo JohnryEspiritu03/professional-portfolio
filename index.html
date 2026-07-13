@@ -439,9 +439,80 @@
             </div>
         </section>
 
-        <section class="about section" id ="contact">
+        <section class="contact section" id ="contact">
+            <h2 class="section__title">
+                Contact <span>Me</span>
+            </h2>
 
-            
+            <div class="contact__container container grid">
+                <form action="" class="contact__form grid" id="contact-form">
+                    <div class="contact__group">
+                        <input type="text" id="name"  name="user_name" required autocomplete="name" class="contact__input">
+                        <label for="name" class="contact__label">Name</label>
+                    </div>
+
+                    <div class="contact__group">
+                        <input type="email" id="email"  name="user_email" required autocomplete="email" class="contact__input">
+                        <label for="email" class="contact__label">Email</label>
+                    </div>
+
+                    <div class="contact__group">
+                        <textarea name="user_message" id="message" required class="contact__input contact__area"></textarea>
+                        <label for="message" class="contact__label">Message</label>
+                    </div>
+
+                    <button type="submit" class="contact__button button">
+                        <span>Send Message</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+
+                    <p class="contact__message" id="contact-message"></p>
+                </form>
+
+                <div class="contact__content grid">
+                    <a href="mailto:espiritu.johnry@gmail.com" target="_blank" class="contact__link">
+                        <div class="contact__info">
+                            <i class="ri-mail-line contact__icon"></i>
+                            <div class="contact__text">
+                                <h3 class="contact__title">Email</h3>
+                                <address class="contact__address">espiritu.johnry@gmail.com</address>
+                            </div>
+                        </div>
+
+                        <div class="contact__arrow">
+                            <i class="ri-arrow-right-up-line"></i>
+                        </div>
+                    </a>
+
+                    <a href="tel:+63 9278552130" target="_blank" class="contact__link">
+                        <div class="contact__info">
+                            <i class="ri-phone-line contact__icon"></i>
+                            <div class="contact__text">
+                                <h3 class="contact__title">Phone Number</h3>
+                                <address class="contact__address">+63 927 855 2130</address>
+                            </div>
+                        </div>
+
+                        <div class="contact__arrow">
+                            <i class="ri-arrow-right-up-line"></i>
+                        </div>
+                    </a>
+
+                    <a href="https://share.google/uLaqHmV69quGvPCHc" target="_blank" class="contact__link">
+                        <div class="contact__info">
+                            <i class="ri-map-pin-line contact__icon"></i>
+                            <div class="contact__text">
+                                <h3 class="contact__title">Location</h3>
+                                <address class="contact__address">Bula, Camarines Sur 4430</address>
+                            </div>
+                        </div>
+
+                        <div class="contact__arrow">
+                            <i class="ri-arrow-right-up-line"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </section>
 
     </main>
@@ -450,6 +521,9 @@
 
     <!-- SWIPER JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- EMAIL JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <script src="script.js"></script>
 

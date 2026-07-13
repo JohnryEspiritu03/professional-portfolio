@@ -102,3 +102,28 @@ experienceButtons.forEach(button => {
         }
     })
 })
+
+
+// EMAIL JS
+const contactForm = document.getElementById('contact-form'),
+contactMessage = document.getElementById('contact-message')
+
+const sendEmail = async (e) => {
+    e.preventDefault()
+
+    try{
+        // serviceID - templateID - #form - publicKey
+        await emailjs.sendForm('service_24eqfom','template_e7nshui','#contact-form','NRuND4r-6TNsRvkA7')
+
+        // show sent message
+        contactMessage.textContent = 'Message sent successfully'
+
+        // clear input fields
+        contactForm.reset()
+    } catch(error){
+        contactMessage.textContent = 'Message not sent (service error)'
+    } finally{
+        setTimeout(() => contactMessage.textContent = '', 5000)
+    }
+}
+contactForm.addEventListener('submit', sendEmail)
