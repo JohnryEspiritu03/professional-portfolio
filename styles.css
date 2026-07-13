@@ -643,7 +643,7 @@ img{
 
 /* rotate icon */
 .experience-open .experience__arrow i{
-    rotate: 180deg;
+    rotate: -180deg;
 }
 /* ---------------------------  SECTION --------------------------- */
 
@@ -656,7 +656,8 @@ img{
     }
 
     .home__container,
-    .about__container{
+    .about__container,
+    .experience__container{
         grid-template-columns: 400px;
         justify-content: center;
     }
@@ -785,6 +786,32 @@ img{
 
     .project .blob-big{
         right: -6rem;
+    }
+
+    .experience__container{
+        grid-template-columns: 690px;
+        row-gap: 3rem;
+    }
+
+    .experience__card{
+        padding-bottom: 2rem;
+    }
+
+    .experience__button{
+        column-gap: 3rem;
+    }
+
+    .experience__icon{
+        font-size: 2.5rem;
+    }
+
+    .experience__name{
+        font-size: var(--h1-font-size);
+    }
+
+    .experience__description,
+    .experience__list{
+        padding-left: 5.5rem;
     }
 }  
 

@@ -81,5 +81,24 @@ const swiperProject = new Swiper('.project__swiper', {
 //   }
 });
 
-// SERVICES ACCORDION
+// EXPERIENCE ACCORDION
+const experienceCards = document.querySelectorAll('.experience__card'),
+experienceButtons = document.querySelectorAll('.experience__button')
 
+// iterates over each button found
+experienceButtons.forEach(button => {
+    button.addEventListener('click', () =>{
+        const currentCard = button.closest('.experience__card'),
+        isOpen = currentCard.classList.contains('experience-open')
+
+        // close all other experience data
+        experienceCards.forEach(card =>{
+            card.classList.replace('experience-open', 'experience-close')
+        })
+
+        // opens closed clicked card
+        if(!isOpen){
+            currentCard.classList.replace('experience-close', 'experience-open')
+        }
+    })
+})
