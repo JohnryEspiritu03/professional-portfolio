@@ -81,24 +81,24 @@ const swiperProject = new Swiper('.project__swiper', {
 //   }
 });
 
-// EXPERIENCE ACCORDION
-const experienceCards = document.querySelectorAll('.experience__card'),
-experienceButtons = document.querySelectorAll('.experience__button')
+// service ACCORDION
+const serviceCards = document.querySelectorAll('.service__card'),
+serviceButtons = document.querySelectorAll('.service__button')
 
 // iterates over each button found
-experienceButtons.forEach(button => {
+serviceButtons.forEach(button => {
     button.addEventListener('click', () =>{
-        const currentCard = button.closest('.experience__card'),
-        isOpen = currentCard.classList.contains('experience-open')
+        const currentCard = button.closest('.service__card'),
+        isOpen = currentCard.classList.contains('service-open')
 
-        // close all other experience data
-        experienceCards.forEach(card =>{
-            card.classList.replace('experience-open', 'experience-close')
+        // close all other service data
+        serviceCards.forEach(card =>{
+            card.classList.replace('service-open', 'service-close')
         })
 
         // opens closed clicked card
         if(!isOpen){
-            currentCard.classList.replace('experience-close', 'experience-open')
+            currentCard.classList.replace('service-close', 'service-open')
         }
     })
 })
@@ -209,8 +209,8 @@ sr.reveal(`.about__button`, {delay:900})
 
 sr.reveal(`.project__swiper`)
 
-sr.reveal(`.experience__card:nth-child(odd)`, {interval: 200, origin: 'left', distance: '100px'})
-sr.reveal(`.experience__card:nth-child(even)`, {interval: 200, origin: 'right', distance: '100px'})
+sr.reveal(`.service__card:nth-child(odd)`, {interval: 200, origin: 'left', distance: '100px'})
+sr.reveal(`.service__card:nth-child(even)`, {interval: 200, origin: 'right', distance: '100px'})
 
 sr.reveal(`.skills__description`)
 sr.reveal(`.skills__card`, {delay:600, interval: 200})

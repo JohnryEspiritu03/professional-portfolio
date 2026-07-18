@@ -785,8 +785,8 @@ img{
     grid-row-gap: 0px;
     grid-template-columns: 1fr 180px 1fr;
     grid-auto-columns: 1f;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     display: grid;
     position: relative;
 }
@@ -861,6 +861,24 @@ img{
     inset: 0 auto 50vh;
 }
 
+.timeline_image-wrapper img {
+    max-height: 120px;
+    width: auto;
+    display: block;
+}
+
+.timeline_text ul {
+    list-style: disc;
+    list-style-position: outside;
+    padding-left: 1.5rem;
+    margin-top: .5rem;
+}
+
+.timeline_text li {
+    display: list-item;
+    margin-bottom: .5rem;
+}
+
 /* .section-timeline{
     z-index: -3;
     background-color: var(--black-color);
@@ -868,7 +886,11 @@ img{
 } */
 
 .margin-bottom-xlarge{
-    margin-bottom: 56px;
+    margin-bottom: 50px;
+}
+
+.margin-bottom-xlarge .h2{
+    color: var(--text-color);
 }
 
 /* .timeline_link{
