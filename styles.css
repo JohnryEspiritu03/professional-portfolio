@@ -857,7 +857,7 @@ img{
     );
     width: 3px;
     height: 50vh;
-    position: fixed;
+    position: sticky;
     inset: 0 auto 50vh;
 }
 
